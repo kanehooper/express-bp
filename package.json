@@ -1,0 +1,29 @@
+{
+  "name": "boiler_plate",
+  "version": "1.0.0",
+  "description": "Node, Express, Mongo, EJS boiler-plate",
+  "main": "app.js",
+  "engines": {
+    "node": "12.x"
+  },
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kane Hooper",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "2.4.2",
+    "compression": "1.7.4",
+    "cookie-parser": "1.4.4",
+    "dotenv": "8.0.0",
+    "ejs": "2.6.2",
+    "express": "4.17.1",
+    "express-status-monitor": "1.2.6",
+    "helmet": "3.20.0",
+    "mongoose": "5.6.9",
+    "morgan": "1.9.1",
+    "serve-favicon": "2.5.0",
+    "throng": "4.0.0"
+  }
+}
