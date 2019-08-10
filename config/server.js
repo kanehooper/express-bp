@@ -7,9 +7,9 @@ const express = require('express')
 const path = require('path')
 
 /**
- * Generate express app
+ * Generate express app and export
  */
-const app = express()
+const app = module.exports = express()
 
 /**
  * View Engine
@@ -20,15 +20,11 @@ app.set('views', path.join(__dirname, '../views'))
 /**
  * Add Middleware
  */
-require('./middleware')()
+const addMiddleware = require('./middleware')
+addMiddleware()
 
 /**
  * Add Routes
  */
-require('./routes')()
-
-/**
- * Exports
- */
-module.exports = app
-
+const addRoutes = require('./routes')
+addRoutes()
