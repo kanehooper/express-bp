@@ -1,11 +1,64 @@
 <%- include('./partials/header') %>
-<h1>Welcome to the Expressjs boilerplate</h1>
-<h3>Technologies Included</h3>
-<ul>
-    <li>Language: Nodejs</li>
-    <li>Web framework: Expressjs</li>
-    <li>Database: MongoDB</li>
-    <li>View engine: EJS</li>
-</ul>
+<%- include('./partials/nav.ejs') %>
+
+<div class="jumbotron text-center">
+  <div class="container">
+    <a href="/" class="lang-logo">
+      <img src="/img/lang-logo.png">
+    </a>
+    <h1>Node.js and Express.js generator</h1>
+    <p>This is a basic boilerplate for Express.js applications. It is fairly minimalistic, yet contains all of the keys elements such as security best practices, performance monitoring, logs and Mocha test suite. Feel free to use it however you wish.</p>
+    <a type="button" class="btn btn-lg btn-default" href="https://devcenter.heroku.com/articles/getting-started-with-nodejs"><span><img src="./img/youtube.png" width="40"></span></span> In-depth tutorials</a>
+    <a type="button" class="btn btn-lg btn-primary" href="https://github.com/kanehooper/express-bp" target="_blank"><span><img src="./img/github.png" width="50"></span> Source code on GitHub</a>
+  </div>
+</div>
+<div class="container">
+  <div class="alert alert-info text-center" role="alert">
+    To deploy your own copy, and learn the fundamentals of the Heroku platform, head over to the <a href="https://devcenter.heroku.com/articles/getting-started-with-nodejs" class="alert-link">Getting Started with Node on Heroku</a> tutorial.
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-md-6">
+      <h3><span class="glyphicon glyphicon-info-sign"></span> Technologies used</h3>
+      <ul>
+        <li><span class="bold">Laungage: </span><a href="https://nodejs.org/en/" target="_blank"> Node.js v12.x</a></li>
+        <li><span class="bold">Framwork: </span><a href="https://expressjs.com/" target="_blank">Express.js v4.17.1</a></li>
+        <li><span class="bold">Database: </span><a href="https://www.mongodb.com/" target="_blank">MongoDB</a></li>
+        <li><span class="bold">Database ORM: </span><a href="https://www.npmjs.com/package/mongoose" target="_blank">Mongoose</a></li>
+        <li><span class="bold">View engine: </span><a href="https://ejs.co/" target="_blank">EJS</a></li>
+        <li><span class="bold">Test framework: </span><a href="https://mochajs.org/" target="_blank">Mocha</a></li>
+        <li><span class="bold">Test assertion library: </span><a href="https://www.chaijs.com/" target="_blank">Chai</a></li>
+        <li><span class="bold">Cloud hosting platform: </span><a href="https://heroku.cok/" target="_blank">Heroku</a></li>
+        
+
+        <li>This app was deployed to Heroku, either using Git or by using <a href="https://github.com/heroku/node-js-getting-started">Heroku Button</a> on the repository.</li>        
+        
+      </ul>
+    </div>
+    <div class="col-md-6">
+      <h3><span class="glyphicon glyphicon-link"></span> Next Steps</h3>
+      <ul>
+        <li>If you are following the <a href="https://devcenter.heroku.com/articles/getting-started-with-nodejs">Getting Started</a> guide, then please head back to the tutorial and follow the next steps!</li>
+        <li>If you deployed this app by deploying the Heroku Button, then in a command line shell, run:</li>
+        <ul>
+          <li><code>git clone https://github.com/heroku/node-js-getting-started.git</code> - this will create a local copy of the source code for the app</li>
+          <li><code>cd node-js-getting-started</code> - change directory into the local source code repository</li>
+          <li><code>heroku git:remote -a &lt;your-app-name></code> - associate the Heroku app with the repository</li>
+          <li>You'll now be set up to run the app locally, or <a href="https://devcenter.heroku.com/articles/getting-started-with-nodejs#push-local-changes">deploy changes</a> to Heroku</li>
+        </ul>
+      </ul>
+      <h3><span class="glyphicon glyphicon-link"></span> Helpful Links</h3>
+      <ul>
+        <li><a href="https://www.heroku.com/home">Heroku</a></li>
+        <li><a href="https://devcenter.heroku.com/">Heroku Dev Center</a></li>
+        <li><a href="https://devcenter.heroku.com/articles/getting-started-with-nodejs">Getting Started with Node on Heroku</a></li>
+        <li><a href="https://devcenter.heroku.com/articles/deploying-nodejs">Deploying Node Apps on Heroku</a></li>
+      </ul>
+    </div>
+  </div> <!-- row -->
+   <div class="alert alert-info text-center" role="alert">
+    Please do work through the Getting Started guide, even if you do know how to build such an application.  The guide covers the basics of working with Heroku, and will familiarize you with all the concepts you need in order to build and deploy your own apps.
+  </div>
+</div>
 
 <%- include('./partials/footer') %>
