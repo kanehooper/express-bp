@@ -28,5 +28,3 @@ throng({
     workers: WORKERS,
     lifetime: Infinity
 }, start)
-
-// Test deploy
