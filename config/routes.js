@@ -14,6 +14,7 @@ const addRoutes = () => {
 
     // Add primary app routes
     app.get('/', homeController.index)
+    app.get('/error_test', homeController.error)
     // Add other app routes here
 
     // Add API routes
