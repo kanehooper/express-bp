@@ -1,0 +1,86 @@
+<!-- Head -->
+<%- include('./partials/head.ejs') %>
+<!-- css// Custom page css -->
+<link rel="stylesheet" type="text/css" href="/css/home.css">
+</head>
+
+<body>
+<%- include('./partials/nav.ejs') %>
+
+<!-- container// Signup form -->
+<div class="container">
+    <div class="card bg-light">
+        <article class="card-body mx-auto" style="min-width: 400px;">
+            <!-- text// Opening text-->
+            <h4 class="card-title mt-3 text-center">Create Account</h4>
+            <p class="text-center">Get started with your free account</p>
+
+            <!-- button// Social signup -->
+            <p>
+                <a href="" class="btn btn-block btn-facebook"> <i class="fab fa-facebook-f"></i>   Login via facebook</a>
+                <a href="" class="btn btn-block btn-google"> <i class="fab fa-google"></i>   Login via Google</a>
+            </p>
+
+            <!-- divider// Sigup divider-->
+            <p class="divider-text">
+                <span class="bg-light">OR</span>
+            </p>
+
+            <!-- form// Signup -->
+            <form method="POST" action="/register" novalidate>
+                <!-- form-group// First name -->
+                <div class="form-group input-group"> 
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                    </div>
+                    <input name="firstName" id="firstName" class="form-control" placeholder="First name" type="text" required="">
+                    <div class="invalid-feedback"></div>
+                </div> 
+
+                 <!-- form-group// Last name -->
+                <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                    </div>
+                    <input name="lastName" id="lastName" class="form-control" placeholder="Last name" type="text" required="">
+                </div> 
+
+                <!-- form-group// Email -->
+                <div class="form-group input-group"> 
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+                    </div>
+                    <input name="email" id="email" class="form-control" placeholder="Email address" type="email" required="">
+                </div> 
+
+                <!-- form-group// Password -->
+                <div class="form-group input-group"> 
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+                    </div>
+                    <input name="password" id="password" class="form-control" placeholder="Create password" type="password" required="">
+                </div> 
+
+                <!-- form-group// Confirm Password -->
+                <!-- TODO: Confirm password at client level -->
+                <div class="form-group input-group"> 
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+                    </div>
+                    <input name="passwordConfirm" id="passwordConfirm" class="form-control" placeholder="Confirm password" type="password" required="">
+                </div>   
+
+                <!-- form-group// button// Create Account --> 
+                <div class="form-group">
+                    <button type="submit" id="submit" class="btn btn-primary btn-block"> Create Account  </button>
+                </div> 
+                
+                <!-- link// Login -->
+                <p class="text-center">Have an account? <a href="/login">Log In</a> </p>                                                                 
+            </form>
+        </article>
+    </div> 
+</div> 
+
+<!-- Footer -->
+<%- include('./partials/footer.ejs') %>

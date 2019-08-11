@@ -17,6 +17,30 @@ describe('GET /', () => {
     })
 })
 
+describe('GET /signup', () => {
+    it('should return 200 OK', (done) => {
+        request(app)
+            .get('/signup')
+            .expect(200, done)
+    })
+})
+
+describe('GET /login', () => {
+    it('should return 200 Ok', (done) => {
+        request(app)
+            .get('/login')
+            .expect(200, done)
+    })
+})
+
+describe('POST /register', () => {
+    it('should return 200 Ok', (done) => {
+        request(app)
+            .post('/register')
+            .expect(200, done)
+    })
+})
+
 describe('404 route', () => {
     it('should return 404 not found', (done) => {
         request(app)

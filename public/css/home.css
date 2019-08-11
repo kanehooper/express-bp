@@ -1,0 +1,97 @@
+/**
+ * Home page styling
+ * Route / 
+ */
+
+ .jumbotron {
+    background: #6b1b2f;
+    color: white;
+    padding-bottom: 50px; 
+}
+
+.jumbotron .btn {
+    margin-bottom: 10px;
+}
+
+.jumbotron .btn-default {
+    width: 300px;
+    height: 60px;
+}
+
+.jumbotron .btn-success {
+    width: 300px; 
+    height: 60px;
+}
+
+.jumbotron .btn-primary:hover {
+    background: #576b1b; 
+}
+
+.jumbotron p {
+    color: #d9ccee;
+    max-width: 75%;
+    margin: 1em auto 2em; 
+}   
+
+.navbar + .jumbotron {
+    margin-top: -20px; 
+}
+
+.jumbotron .lang-logo {
+    display: block;
+    background: #2F6B1B;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    border: 4px solid white; 
+}
+
+.jumbotron .lang-logo img {
+    max-width: 100%; 
+}
+
+.bold {
+    font-weight: bold;
+}
+
+/**
+ * Signup and Login styling
+ * Route /login /signup
+ */
+
+.card {
+    margin-top: 15px;
+}
+
+.divider-text {
+    position: relative;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.divider-text span {
+    padding: 7px;
+    font-size: 12px;
+    position: relative;   
+    z-index: 2;
+}
+.divider-text:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    top: 55%;
+    left: 0;
+    z-index: 1;
+}
+
+.btn-facebook {
+    background-color: #405D9D;
+    color: #fff;
+}
+.btn-google {
+    background-color: #DF4B3B; 
+    color: #fff;
+}

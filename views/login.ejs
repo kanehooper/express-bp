@@ -1,0 +1,60 @@
+<!-- Head -->
+<%- include('./partials/head.ejs') %>
+<!-- css// Custom page css -->
+<link rel="stylesheet" type="text/css" href="/css/home.css">
+</head>
+
+<body>
+<%- include('./partials/nav.ejs') %>
+
+<!-- container// Login form -->
+<div class="container">
+    <div class="card bg-light">
+        <article class="card-body mx-auto" style="min-width: 400px;">
+            <!-- text// Opening text-->
+            <h4 class="card-title mt-3 text-center">Sign in</h4>
+
+            <!-- button// Social signup -->
+            <p>
+                <a href="" class="btn btn-block btn-facebook"> <i class="fab fa-facebook-f"></i>   Login via facebook</a>
+                <a href="" class="btn btn-block btn-google"> <i class="fab fa-google"></i>   Login via Google</a>
+                
+            </p>
+
+            <!-- divider// Sigup divider-->
+            <p class="divider-text">
+                <span class="bg-light">OR</span>
+            </p>
+
+            <!-- form// Login -->
+            <form>
+                <!-- form-group// Email -->
+                <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+                    </div>
+                    <input name="email" class="form-control" placeholder="Email address" type="email">
+                </div>
+
+                <!-- form-group// Password -->
+                <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+                    </div>
+                    <input name="password" class="form-control" placeholder="Password" type="password">
+                </div>
+                
+                <!-- form-group// button// Login -->
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary btn-block"> Login  </button>
+                </div> 
+
+                <!-- link// Signup -->
+                <p class="text-center">Don't have an account? <a href="/signup">Sign up</a> </p>                                                                 
+            </form>
+        </article>
+    </div> 
+</div> 
+
+<!-- Footer -->
+<%- include('./partials/footer.ejs') %>

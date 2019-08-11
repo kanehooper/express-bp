@@ -1,4 +1,10 @@
-<%- include('./partials/header') %>
+<!-- Head -->
+<%- include('./partials/head') %>
+<!-- css// Customer CSS -->
+<link rel="stylesheet" type="text/css" href="/css/home.css">
+</head>
+
+</body>
 <%- include('./partials/nav.ejs') %>
 
 <div class="jumbotron text-center">
@@ -9,7 +15,7 @@
     <h1>Node.js and Express.js generator</h1>
     <p>This is a basic boilerplate for Express.js applications. It is fairly minimalistic, yet contains all of the keys elements such as security best practices, performance monitoring, logs and Mocha test suite. Feel free to use it however you wish.</p>
     <a type="button" class="btn btn-lg btn-default" href="https://devcenter.heroku.com/articles/getting-started-with-nodejs"><span><img src="./img/youtube.png" width="40"></span></span> In-depth tutorials</a>
-    <a type="button" class="btn btn-lg btn-primary" href="https://github.com/kanehooper/express-bp" target="_blank"><span><img src="./img/github.png" width="50"></span> Source code on GitHub</a>
+    <a type="button" class="btn btn-lg btn-success" href="https://github.com/kanehooper/express-bp" target="_blank"><span><img src="./img/github.png" width="50"></span> Source code on GitHub</a>
   </div>
 </div>
 <div class="container">
@@ -55,10 +61,11 @@
         <li><a href="https://devcenter.heroku.com/articles/deploying-nodejs">Deploying Node Apps on Heroku</a></li>
       </ul>
     </div>
-  </div> <!-- row -->
+  </div>
    <div class="alert alert-info text-center" role="alert">
     Please do work through the Getting Started guide, even if you do know how to build such an application.  The guide covers the basics of working with Heroku, and will familiarize you with all the concepts you need in order to build and deploy your own apps.
   </div>
 </div>
 
+<!-- Footer -->
 <%- include('./partials/footer') %>

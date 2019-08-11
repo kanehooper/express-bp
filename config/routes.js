@@ -10,11 +10,15 @@ const app = require('./server')
  */
 const addRoutes = () => {
     // Incldue controllers
-    const homeController = require('../controllers/app/home')
+    const homeController = require('../controllers/app/home_controller')
 
     // Add primary app routes
     app.get('/', homeController.index)
+    app.get('/signup', homeController.signup)
+    app.get('/login', homeController.login)
+    app.post('/register', homeController.register)
     app.get('/error_test', homeController.error)
+    
     // Add other app routes here
 
     // Add API routes

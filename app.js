@@ -17,7 +17,7 @@ const start = () => {
     server.listen(PORT, () => console.log(`${chalk.green('✓')} Server listening on port ${PORT}`))
     chalk.green('✓')
     // Start mongodb database
-    require('./databases/mongo-database')
+    require('./databases/mongo_database')
 }
 
 // Set number of cluster workers based on Heroku dyno concurrency
