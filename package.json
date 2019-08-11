@@ -13,7 +13,7 @@
   "author": "Kane Hooper",
   "license": "ISC",
   "dependencies": {
-    "bootstrap-validate": "2.1.3",
+    "bcrypt": "3.0.6",
     "chalk": "2.4.2",
     "compression": "1.7.4",
     "cookie-parser": "1.4.4",

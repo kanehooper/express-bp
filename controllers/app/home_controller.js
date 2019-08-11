@@ -1,6 +1,12 @@
 'use strict'
 
 /**
+ * Module dependencies
+ */
+const bcrypt = require('bcrypt')
+const UserModel = require('../../models/user_model')
+
+/**
  * GET /
  * Home page
  */
@@ -29,24 +35,31 @@ exports.login = ((req, res) => {
  * Registration processing route
  */
 exports.register = ((req, res) => {
+  // Retrieve form data
   const {firstName, lastName, email, password } = req.body
-  const UserModel = require('../../models/user_model')
-  const user = new UserModel({
-    firstName,
-    lastName,
-    email,
-    password
-  })
+  
+  // Hash password
+  const saltRounds = 10
+  bcrypt.hash(password, saltRounds, (err, hash) => {
+    // Create model
+    const user = new UserModel({
+      firstName,
+      lastName,
+      email,
+      password: hash
+    })
 
-  user.save()
-    .then(doc => {
-      console.log(doc)
-      res.send({message: 'User saved'})
-    })
-    .catch(err => {
-      console.error(err)
-      res.send({message: 'Failed to create user'})
-    })
+    // Save to MongoDB
+    user.save()
+      .then(doc => {
+        console.log(doc)
+        res.send({message: 'User saved'})
+      })
+      .catch(err => {
+        console.error(err)
+        res.send({message: 'Failed to create user'})
+      })
+  })
 })
 
 /**
