@@ -9,15 +9,21 @@ const app = require('./server')
  * Routes
  */
 const addRoutes = () => {
+    // Include middleware functions
+    const {authenticationMiddleware} = require('./middleware')
+    
     // Incldue controllers
     const homeController = require('../controllers/app/home_controller')
+    const userController = require('../controllers/app/user_controller')
 
     // Add primary app routes
     app.get('/', homeController.index)
-    app.get('/signup', homeController.signup)
-    app.get('/login', homeController.login)
-    app.post('/register', homeController.register)
+    app.get('/signup', userController.signup)
+    app.post('/register', userController.register)
+    app.get('/login', userController.login)
+    app.get('/logout', userController.logout)
     app.get('/error_test', homeController.error)
+    app.get('/profile', authenticationMiddleware, userController.profile)
     
     // Add other app routes here
 

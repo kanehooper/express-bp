@@ -1,6 +1,6 @@
 'use strict'
 
-/**
+/** 
  * Module dependencies
  */
 const mongoose = require('mongoose')
@@ -20,13 +20,9 @@ class Database {
     }
 
     _connect() {
-        mongoose.connect(process.env.MONGODB_URI, {useNewUrlParser: true}, (err, res) => {
-            if (err) {
-                console.log(chalk.red(`Error connecting to ${mongoURL}. ${err}`))
-            } else {
-                console.log(`${chalk.green('✓')} Connected to MongoDB`)
-            }
-        })
+        mongoose.connect(process.env.MONGODB_URI, {useNewUrlParser: true})
+            .then(() => console.log(`${chalk.green('✓')} Connected to MongoDB`))
+            .catch(err => console.log(`${chalk.green('✓')} Connected to MongoDB`))
     }
 }
 

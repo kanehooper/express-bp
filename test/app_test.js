@@ -41,6 +41,14 @@ describe('POST /register', () => {
     })
 })
 
+describe('GET /profile', () => {
+    it('should return 200 Ok', (done) => {
+        request(app)
+            .get('/profile')
+            .expect(200, done)
+    })
+})
+
 describe('404 route', () => {
     it('should return 404 not found', (done) => {
         request(app)
@@ -56,6 +64,8 @@ describe('Default express error handler', () => {
             .expect(500, done)
     })
 })
+
+
 
 // Add tests here for all new app routes added
 

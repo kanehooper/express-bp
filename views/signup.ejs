@@ -7,6 +7,8 @@
 <body>
 <%- include('./partials/nav.ejs') %>
 
+
+
 <!-- container// Signup form -->
 <div class="container">
     <div class="card bg-light">
@@ -26,6 +28,9 @@
                 <span class="bg-light">OR</span>
             </p>
 
+            <!-- Include error messages -->
+            <%- include('./partials/messages.ejs') %>
+
             <!-- form// Signup -->
             <form method="POST" action="/register" novalidate>
                 <!-- form-group// First name -->
@@ -33,7 +38,7 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text"> <i class="fa fa-user"></i> </span>
                     </div>
-                    <input name="firstName" id="firstName" class="form-control" placeholder="First name" type="text" required="">
+                    <input name="firstName" id="firstName" class="form-control" placeholder="First name" type="text" value="<%= typeof firstName != 'undefined' ? firstName : '' %>" required="">
                     <div class="invalid-feedback"></div>
                 </div> 
 
@@ -42,7 +47,7 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text"> <i class="fa fa-user"></i> </span>
                     </div>
-                    <input name="lastName" id="lastName" class="form-control" placeholder="Last name" type="text" required="">
+                    <input name="lastName" id="lastName" class="form-control" placeholder="Last name" type="text" value="<%= typeof lastName != 'undefined' ? lastName : '' %>" required="">
                 </div> 
 
                 <!-- form-group// Email -->
@@ -50,7 +55,7 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
                     </div>
-                    <input name="email" id="email" class="form-control" placeholder="Email address" type="email" required="">
+                    <input name="email" id="email" class="form-control" placeholder="Email address" type="email" value="<%= typeof email != 'undefined' ? email : '' %>" required="">
                 </div> 
 
                 <!-- form-group// Password -->

@@ -14,7 +14,6 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true,
         unique: false,
-
     },
     lastName: {
         type: String,
@@ -34,12 +33,15 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true,
         unique: false
+    },
+    date: {
+        type: Date,
+        default: Date.now()
     }
 })
 
 /**
  * Export model
  */
-
 module.exports = mongoose.model('User', userSchema)
 

@@ -20,7 +20,7 @@ app.set('views', path.join(__dirname, '../views'))
 /**
  * Add Middleware
  */
-const addMiddleware = require('./middleware')
+const {addMiddleware} = require('./middleware')
 addMiddleware()
 
 /**
